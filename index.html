@@ -261,8 +261,199 @@
         console.log(testEqual(12));
 
 
+        // Comparison with the strict equality operator
+        // the difference is that the equality operator 
+        //tries to compare the value where in the strict equality 
+        //oeprator does not so the type conversion.
 
+        /*
+        lets se an example
+        3 == '3'    will be evaluated to true 
+        3 === '3'   will be false as it does not convert the string to number
+
+
+        practice comparing different values
+
+        /* comparing with strict equality operator
+        lets see how*/
+
+        function strictEquality(val) {
+
+            if (val === 99) {
+                return "Strictly Equals";
+            }
+                return "Not Equals";
+        }
+
+        console.log(strictEquality("99"));
+
+        /* here the number is the same but ist returning not equal
+        as it is a string and strict equality operator does not convert
+        string into a number.
+
+
+        The Inequality operator. Lets see how it works
+        The Inequality operator sing != 
+        */ 
+
+
+        function testNotEqual(val) {
+            if (val != 17) {
+                return "It does not";
+            }
+
+            return "It does";
+        }
+
+        console.log(testNotEqual(17));
+
+
+        // The strict Inequality Operator
+        // The Strict Inequality Operator !==
+        // Even thought the number is 17 but the tyoe is string hence it does not read it.
+
+        function testStrictNotEqual(val) {
+            if (val !==  17) {
+                return "It Does Not Equal";
+            }
+            return "It does Equal";
+        }
+        console.log(testStrictNotEqual("17"));
+
+
+        /*
+        comparison with the logical and operator 
+        basically its using the greater than operator.
+        lets see how it works
+        */
+
+        function testGreaterThan(val) {
+            if (val > 100) {
+                return "Greater than 100"
+            }
+            if (val > 10) {
+                return "Greater than 10";
+            } 
+            return "Under 10";
+        }
+        console.log(testGreaterThan(10));
+
+
+        /*
+        Lets see how the greater than or equal to operator works
+        */
+
+        function greaterThanOrEqual(val) {
+            if (val >= 50) {
+                return "Its Greater Than 10";
+            }
+            if (val >= 10) {
+                return "It Equals 50";
+            }
+            return "It equals nothing";
+        }
+
+        console.log(greaterThanOrEqual(15));
+
+
+        /*
+        lets check the less than operator
+        */ 
+
+        function lessThan(val) {
+            if (val < 10) {
+                return "Less Than 10";
+            }
+
+            if (val < 50) {
+                return "Less than 50";
+            }
+
+            return "Noting At All";
+        }
+
+        console.log(lessThan(15));
+
+        /*
+        Lets see how the less than or equal to operator works
+        */
+
+        function lessThanOrEqual(val) {
+            if (val <= 15) {
+                return "Less Than 15 or Equal";
+            }
+            if (val <=50) {
+                return "Less Than 50 or Equal";
+            }
+            return "IT Does nothing";
+        }
+        console.log(lessThanOrEqual(45));
+
+        /*
+        comparison with logical and operator
+        here you check if the value is less than or more than in the same function
+        */ 
+
+        function testLocicalAnd(val) {
+            if (val < 50) {
+                if (val > 25) {
+                    return "Yippee"
+                }
+                return "No";
+            }
+        }
+        console.log(testLocicalAnd(19));
+
+
+                            // OR 
+        /*
+        there is an easir way. we can use the && operator instead of writing if twice
+        lets see how
+        */ 
+
+        function testLogicalAnd(val) {
+            if (val <= 50 && val >= 25) {
+                return "Yes";
+            }
+            return "Yippie";
+        }
+        console.log(testLogicalAnd(17));
+
+        /* 
+        Lets check comparison or
+        */ 
+
+        function testLogicalOr(val) {
+            if (val < 10 || val > 15) {
+                return "Its Raining";
+            }
+            return "Its sunny";
+        }
+        console.log(testLogicalOr(9));
+
+
+        /*
+                    Else Sttement 
+
+        Now lets check else statement
+        Now we have been writing if statments twice if you can see for alternate results.
+        But we can make that code mush simpler
+        Lets see how
+        */ 
+
+        function testElse(val) {
+            var result = "";
+
+            if (val < 15) {
+                result = "Its Outside";
+            } else {
+                result = "Its Inside";
+            }
+            return result;
+        }
+        console.log(testElse(17));
     </script>
+
 
 </body>
 </html>
