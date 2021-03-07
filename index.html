@@ -84,8 +84,183 @@
 
         // So we have 2 variables with the same name. one locally and the other one globally. The console is gonna access the data which is locally. Example of global vs local scope in function.
 
+        // Declaring a function
 
+        function myFunction() {
+            console.log("Hey World");
+        }
+
+        myFunction();
+
+        // passing value to function with arguments
+
+        //parameters are variables that act as a placeholder for the values that are to be input to a function when it is called. lets see how 
         
+        /*
+        function with arguments
+        now we have defines a function and inside of the parantheses we have added a placeholder. This can be any value
+        or any name. than we call the function and we pass the value there instead of a and b.
+        lets see how. inside of function it say console.log a - b. now a is 10 and b is 5.
+        */
+
+        function ourFunctionWithArgs(a, b) {
+            console.log(a - b);
+        }
+
+        ourFunctionWithArgs(35, 19);
+
+
+        /* global scope and function 
+        variables which are deined outside of a function block it can be 
+        accessed from anywhere and we can see it anywhere
+        now what we are checking here is if typeof my global  does not equal undefine execute these
+        actions
+        */
+
+        var myGlobal = 21;
+
+        function funNew() {
+            oopsGlobal = 16;
+        }
+
+        function funOld() {
+            var output = "";
+            if (typeof myGlobal != 'undefined') {
+                output += "myGlobal: " + myGlobal;
+            }
+            if (typeof oopsGlobal != 'undefined') {
+                output += " oopsGlobal: " + oopsGlobal;
+            }
+            console.log(output);
+        }
+    
+        funNew();
+        funOld();
+
+
+        /*
+        variables that are declared within a function are local
+        */ 
+
+
+        // console.log(india);
+
+        // i wond be able to acces this variable as it is declared inside of a function 
+
+
+        // and the once that are delcared outside a function are global.
+        // But there is a way can access thay global variable loacally
+
+        // you can return value with a return statement
+
+        function minusSeven(num) {
+            return num - 7;
+        }
+
+        console.log(minusSeven(10));
+
+        // lets create a new one.
+
+        function timesFive(num) {
+            return num * 5;
+        }
+        console.log(timesFive(5));
+
+        // Assigment with a return value
+        //its simple to assign a return value. 
+        // we have a function change and its going to return 
+        // the resutl of the mathematical expression.
+        // the value that is return from this function will be stored in changed var
+
+        var changed = 0;
+        function change(num) {
+            return (num + 5) / 3;
+        }
+        changed = change(10);
+
+        console.log(changed);
+
+        // lets see another example
+
+        var processed = 0;
+
+        function processArg(num) {
+            return (num + 12) / 9;
+        }
+
+        processed = processArg(45);
+
+        console.log(processed);
+
+        /*
+        here we have a var processed and a fucntion processedArg. WE pass a parameter num to the function
+        we return a mathematical value and than pass that valued to variable processed and console.log(processed);
+        */
+
+
+
+        // stand in line
+        // next in line is a function which add a new array to an existin array. lets see how
+
+        function nextInLine(arr, item) {
+
+            arr.push(item);  // adds an item to the end
+            return arr.shift();  // shift removes an item
+        }
+
+        var testArr = [1, 2, 3, 4, 5];
+
+        console.log("before: " + JSON.stringify(testArr));
+        console.log(nextInLine(testArr, 6));
+        console.log(" After:" + JSON.stringify(testArr));
+
+
+
+        /*
+        Boolean are another data type in JavaScript. They return tru or false and
+        these are the only two values they have.
+        basically these are on off switches where true is on and false is off.
+        they can be used in many more places than just function returns
+        */ 
+
+        function welcomeToBoolean() {
+            return true;
+        }
+
+        console.log(welcomeToBoolean(true));
+
+        // Use Conditional Logic With If Statement
+
+        function ourTrueOrFalse(isItTrue) {
+
+            if (isItTrue) {
+                return "It's True";
+            }
+            return "No, It's False";
+        }
+
+        console.log(ourTrueOrFalse(false));
+
+
+        // comparison with the quality operator
+
+        /*
+        there are many comaprison operator in javaScript with will return true or false
+        the most common is the equality operator.
+        now what we are gonna check if if the key == the pair than return this
+        */ 
+
+        function testEqual(val) {
+            if (val == 12) {
+                return "Yes, Equal";
+            }
+
+            return "Not Equal";
+        }
+
+        console.log(testEqual(12));
+
+
 
     </script>
 
