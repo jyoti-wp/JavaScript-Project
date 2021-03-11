@@ -445,13 +445,34 @@
             var result = "";
 
             if (val < 15) {
-                result = "Its Outside";
+                result = "Its Outside";  // we do not write the if (val > 5) 
             } else {
                 result = "Its Inside";
             }
             return result;
         }
         console.log(testElse(17));
+
+                            // else if statement
+
+        /*
+        If else statement is helpful when you have multiple conditions that need yto be addressed
+        you can you else if statement. Its a way of chaning if statment.
+        for example we have four statements and
+        */ 
+
+        function elseIF(val) {
+            if (val < 50) {
+                return "Greater than 50";
+            } else if (val >= 20) {
+                return "Less than or equal to 20";
+            } else if (val <= 5) {
+                return "Greater than or equal to 5";
+            } else {
+                return "When you say nothing at all";
+            }
+        }                    
+        console.log(elseIF(3));
     </script>
 
 
