@@ -1,272 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <p>Hello Guys</p>
     <script>
+      // shift()
 
-        // shift()
+      var myArray = [
+        ["Jyoti", 28],
+        ["Priya", 26]
+      ];
+      myArray.shift();
+      console.log(myArray);
 
-        var myArray = [["Jyoti", 28], ["Priya", 26]];
-        myArray.shift();
-        console.log(myArray);
+      //unshift()
 
-        //unshift()
+      var comeHome = [
+        ["Joy", 19],
+        ["Joseph", 11]
+      ];
+      comeHome.shift();
+      comeHome.unshift(["Jack", 43]);
+      console.log(comeHome);
 
-        var comeHome = [["Joy", 19], ["Joseph", 11]];
-        comeHome.shift();
-        comeHome.unshift(["Jack", 43]);
-        console.log(comeHome);
+      // function
 
-        // function
+      function newFunction() {
+        console.log("See you later, Aligator");
+      }
 
-        function newFunction() {
-            console.log("See you later, Aligator");
+      newFunction();
+
+      //  gloabal function
+
+      var myGlobal = 10;
+
+      function fun1() {
+        output = "";
+
+        if (typeof myGlobal != "undefined") {
+          output += "myGlobal" + myGlobal;
         }
 
-        newFunction();
+        console.log(output);
+      }
 
-        //  gloabal function
-        
-        var myGlobal = 10;
+      fun1();
 
-        function fun1() {
-            output = "";
+      // another function
 
-            if (typeof myGlobal  != 'undefined') {
-                output += 'myGlobal' + myGlobal;
-            }
+      var myWorld = 99;
 
-            console.log(output);
+      function helloWorld() {
+        output = "";
+        if (typeof myWorld != "undefined") {
+          output += "myWorld" + myWorld;
         }
 
-        fun1();
+        console.log(output);
+      }
 
+      helloWorld();
 
-        // another function
+      // delcaring new var
 
-        var myWorld = 99;
+      var firsTime = 19;
+      firsTime++;
+      console.log(firsTime);
 
-        function helloWorld() {
-            output = "";
-            if (typeof myWorld != 'undefined') {
-                output += 'myWorld' + myWorld;
-            }
+      // global vs local scope in function
 
-            console.log(output);
-        }
+      var myOutfit = "T-shirt";
 
-        helloWorld();
+      function myStyle() {
+        var myOutfit = "Sweater";
+        return myOutfit;
+      }
 
-        // delcaring new var
+      console.log(myStyle());
 
-        var firsTime = 19;
-        firsTime++;
-        console.log(firsTime);
+      // So we have 2 variables with the same name. one locally and the other one globally. The console is gonna access the data which is locally. Example of global vs local scope in function.
 
+      // Declaring a function
 
-        // global vs local scope in function
+      function myFunction() {
+        console.log("Hey World");
+      }
 
-        var myOutfit = "T-shirt";
+      myFunction();
 
-        function myStyle() {
+      // passing value to function with arguments
 
-            var myOutfit = "Sweater";
-            return myOutfit;
-        }
+      //parameters are variables that act as a placeholder for the values that are to be input to a function when it is called. lets see how
 
-        console.log(myStyle());
-
-        // So we have 2 variables with the same name. one locally and the other one globally. The console is gonna access the data which is locally. Example of global vs local scope in function.
-
-        // Declaring a function
-
-        function myFunction() {
-            console.log("Hey World");
-        }
-
-        myFunction();
-
-        // passing value to function with arguments
-
-        //parameters are variables that act as a placeholder for the values that are to be input to a function when it is called. lets see how 
-        
-        /*
+      /*
         function with arguments
         now we have defines a function and inside of the parantheses we have added a placeholder. This can be any value
         or any name. than we call the function and we pass the value there instead of a and b.
         lets see how. inside of function it say console.log a - b. now a is 10 and b is 5.
         */
 
-        function ourFunctionWithArgs(a, b) {
-            console.log(a - b);
-        }
+      function ourFunctionWithArgs(a, b) {
+        console.log(a - b);
+      }
 
-        ourFunctionWithArgs(35, 19);
+      ourFunctionWithArgs(35, 19);
 
-
-        /* global scope and function 
+      /* global scope and function 
         variables which are deined outside of a function block it can be 
         accessed from anywhere and we can see it anywhere
         now what we are checking here is if typeof my global  does not equal undefine execute these
         actions
         */
 
-        var myGlobal = 21;
+      var myGlobal = 21;
 
-        function funNew() {
-            oopsGlobal = 16;
+      function funNew() {
+        oopsGlobal = 16;
+      }
+
+      function funOld() {
+        var output = "";
+        if (typeof myGlobal != "undefined") {
+          output += "myGlobal: " + myGlobal;
         }
-
-        function funOld() {
-            var output = "";
-            if (typeof myGlobal != 'undefined') {
-                output += "myGlobal: " + myGlobal;
-            }
-            if (typeof oopsGlobal != 'undefined') {
-                output += " oopsGlobal: " + oopsGlobal;
-            }
-            console.log(output);
+        if (typeof oopsGlobal != "undefined") {
+          output += " oopsGlobal: " + oopsGlobal;
         }
-    
-        funNew();
-        funOld();
+        console.log(output);
+      }
 
+      funNew();
+      funOld();
 
-        /*
+      /*
         variables that are declared within a function are local
-        */ 
+        */
 
+      // console.log(india);
 
-        // console.log(india);
+      // i wond be able to acces this variable as it is declared inside of a function
 
-        // i wond be able to acces this variable as it is declared inside of a function 
+      // and the once that are delcared outside a function are global.
+      // But there is a way can access thay global variable loacally
 
+      // you can return value with a return statement
 
-        // and the once that are delcared outside a function are global.
-        // But there is a way can access thay global variable loacally
+      function minusSeven(num) {
+        return num - 7;
+      }
 
-        // you can return value with a return statement
+      console.log(minusSeven(10));
 
-        function minusSeven(num) {
-            return num - 7;
-        }
+      // lets create a new one.
 
-        console.log(minusSeven(10));
+      function timesFive(num) {
+        return num * 5;
+      }
+      console.log(timesFive(5));
 
-        // lets create a new one.
+      // Assigment with a return value
+      //its simple to assign a return value.
+      // we have a function change and its going to return
+      // the resutl of the mathematical expression.
+      // the value that is return from this function will be stored in changed var
 
-        function timesFive(num) {
-            return num * 5;
-        }
-        console.log(timesFive(5));
+      var changed = 0;
+      function change(num) {
+        return (num + 5) / 3;
+      }
+      changed = change(10);
 
-        // Assigment with a return value
-        //its simple to assign a return value. 
-        // we have a function change and its going to return 
-        // the resutl of the mathematical expression.
-        // the value that is return from this function will be stored in changed var
+      console.log(changed);
 
-        var changed = 0;
-        function change(num) {
-            return (num + 5) / 3;
-        }
-        changed = change(10);
+      // lets see another example
 
-        console.log(changed);
+      var processed = 0;
 
-        // lets see another example
+      function processArg(num) {
+        return (num + 12) / 9;
+      }
 
-        var processed = 0;
+      processed = processArg(45);
 
-        function processArg(num) {
-            return (num + 12) / 9;
-        }
+      console.log(processed);
 
-        processed = processArg(45);
-
-        console.log(processed);
-
-        /*
+      /*
         here we have a var processed and a fucntion processedArg. WE pass a parameter num to the function
         we return a mathematical value and than pass that valued to variable processed and console.log(processed);
         */
 
+      // stand in line
+      // next in line is a function which add a new array to an existin array. lets see how
 
+      function nextInLine(arr, item) {
+        arr.push(item); // adds an item to the end
+        return arr.shift(); // shift removes an item
+      }
 
-        // stand in line
-        // next in line is a function which add a new array to an existin array. lets see how
+      var testArr = [1, 2, 3, 4, 5];
 
-        function nextInLine(arr, item) {
+      console.log("before: " + JSON.stringify(testArr));
+      console.log(nextInLine(testArr, 6));
+      console.log(" After:" + JSON.stringify(testArr));
 
-            arr.push(item);  // adds an item to the end
-            return arr.shift();  // shift removes an item
-        }
-
-        var testArr = [1, 2, 3, 4, 5];
-
-        console.log("before: " + JSON.stringify(testArr));
-        console.log(nextInLine(testArr, 6));
-        console.log(" After:" + JSON.stringify(testArr));
-
-
-
-        /*
+      /*
         Boolean are another data type in JavaScript. They return tru or false and
         these are the only two values they have.
         basically these are on off switches where true is on and false is off.
         they can be used in many more places than just function returns
-        */ 
+        */
 
-        function welcomeToBoolean() {
-            return true;
+      function welcomeToBoolean() {
+        return true;
+      }
+
+      console.log(welcomeToBoolean(true));
+
+      // Use Conditional Logic With If Statement
+
+      function ourTrueOrFalse(isItTrue) {
+        if (isItTrue) {
+          return "It's True";
         }
+        return "No, It's False";
+      }
 
-        console.log(welcomeToBoolean(true));
+      console.log(ourTrueOrFalse(false));
 
-        // Use Conditional Logic With If Statement
+      // comparison with the quality operator
 
-        function ourTrueOrFalse(isItTrue) {
-
-            if (isItTrue) {
-                return "It's True";
-            }
-            return "No, It's False";
-        }
-
-        console.log(ourTrueOrFalse(false));
-
-
-        // comparison with the quality operator
-
-        /*
+      /*
         there are many comaprison operator in javaScript with will return true or false
         the most common is the equality operator.
         now what we are gonna check if if the key == the pair than return this
-        */ 
+        */
 
-        function testEqual(val) {
-            if (val == 12) {
-                return "Yes, Equal";
-            }
-
-            return "Not Equal";
+      function testEqual(val) {
+        if (val == 12) {
+          return "Yes, Equal";
         }
 
-        console.log(testEqual(12));
+        return "Not Equal";
+      }
 
+      console.log(testEqual(12));
 
-        // Comparison with the strict equality operator
-        // the difference is that the equality operator 
-        //tries to compare the value where in the strict equality 
-        //oeprator does not so the type conversion.
+      // Comparison with the strict equality operator
+      // the difference is that the equality operator
+      //tries to compare the value where in the strict equality
+      //oeprator does not so the type conversion.
 
-        /*
+      /*
         lets se an example
         3 == '3'    will be evaluated to true 
         3 === '3'   will be false as it does not convert the string to number
@@ -277,204 +267,209 @@
         /* comparing with strict equality operator
         lets see how*/
 
-        function strictEquality(val) {
-
-            if (val === 99) {
-                return "Strictly Equals";
-            }
-                return "Not Equals";
+      function strictEquality(val) {
+        if (val === 99) {
+          return "Strictly Equals";
         }
+        return "Not Equals";
+      }
 
-        console.log(strictEquality("99"));
+      console.log(strictEquality("99"));
 
-        /* here the number is the same but ist returning not equal
+      /* here the number is the same but ist returning not equal
         as it is a string and strict equality operator does not convert
         string into a number.
 
 
         The Inequality operator. Lets see how it works
         The Inequality operator sing != 
-        */ 
+        */
 
-
-        function testNotEqual(val) {
-            if (val != 17) {
-                return "It does not";
-            }
-
-            return "It does";
+      function testNotEqual(val) {
+        if (val != 17) {
+          return "It does not";
         }
 
-        console.log(testNotEqual(17));
+        return "It does";
+      }
 
+      console.log(testNotEqual(17));
 
-        // The strict Inequality Operator
-        // The Strict Inequality Operator !==
-        // Even thought the number is 17 but the tyoe is string hence it does not read it.
+      // The strict Inequality Operator
+      // The Strict Inequality Operator !==
+      // Even thought the number is 17 but the tyoe is string hence it does not read it.
 
-        function testStrictNotEqual(val) {
-            if (val !==  17) {
-                return "It Does Not Equal";
-            }
-            return "It does Equal";
+      function testStrictNotEqual(val) {
+        if (val !== 17) {
+          return "It Does Not Equal";
         }
-        console.log(testStrictNotEqual("17"));
+        return "It does Equal";
+      }
+      console.log(testStrictNotEqual("17"));
 
-
-        /*
+      /*
         comparison with the logical and operator 
         basically its using the greater than operator.
         lets see how it works
         */
 
-        function testGreaterThan(val) {
-            if (val > 100) {
-                return "Greater than 100"
-            }
-            if (val > 10) {
-                return "Greater than 10";
-            } 
-            return "Under 10";
+      function testGreaterThan(val) {
+        if (val > 100) {
+          return "Greater than 100";
         }
-        console.log(testGreaterThan(10));
+        if (val > 10) {
+          return "Greater than 10";
+        }
+        return "Under 10";
+      }
+      console.log(testGreaterThan(10));
 
-
-        /*
+      /*
         Lets see how the greater than or equal to operator works
         */
 
-        function greaterThanOrEqual(val) {
-            if (val >= 50) {
-                return "Its Greater Than 10";
-            }
-            if (val >= 10) {
-                return "It Equals 50";
-            }
-            return "It equals nothing";
+      function greaterThanOrEqual(val) {
+        if (val >= 50) {
+          return "Its Greater Than 10";
         }
+        if (val >= 10) {
+          return "It Equals 50";
+        }
+        return "It equals nothing";
+      }
 
-        console.log(greaterThanOrEqual(15));
+      console.log(greaterThanOrEqual(15));
 
-
-        /*
+      /*
         lets check the less than operator
-        */ 
+        */
 
-        function lessThan(val) {
-            if (val < 10) {
-                return "Less Than 10";
-            }
-
-            if (val < 50) {
-                return "Less than 50";
-            }
-
-            return "Noting At All";
+      function lessThan(val) {
+        if (val < 10) {
+          return "Less Than 10";
         }
 
-        console.log(lessThan(15));
+        if (val < 50) {
+          return "Less than 50";
+        }
 
-        /*
+        return "Noting At All";
+      }
+
+      console.log(lessThan(15));
+
+      /*
         Lets see how the less than or equal to operator works
         */
 
-        function lessThanOrEqual(val) {
-            if (val <= 15) {
-                return "Less Than 15 or Equal";
-            }
-            if (val <=50) {
-                return "Less Than 50 or Equal";
-            }
-            return "IT Does nothing";
+      function lessThanOrEqual(val) {
+        if (val <= 15) {
+          return "Less Than 15 or Equal";
         }
-        console.log(lessThanOrEqual(45));
+        if (val <= 50) {
+          return "Less Than 50 or Equal";
+        }
+        return "IT Does nothing";
+      }
+      console.log(lessThanOrEqual(45));
 
-        /*
+      /*
         comparison with logical and operator
         here you check if the value is less than or more than in the same function
-        */ 
+        */
 
-        function testLocicalAnd(val) {
-            if (val < 50) {
-                if (val > 25) {
-                    return "Yippee"
-                }
-                return "No";
-            }
+      function testLocicalAnd(val) {
+        if (val < 50) {
+          if (val > 25) {
+            return "Yippee";
+          }
+          return "No";
         }
-        console.log(testLocicalAnd(19));
+      }
+      console.log(testLocicalAnd(19));
 
-
-                            // OR 
-        /*
+      // OR
+      /*
         there is an easir way. we can use the && operator instead of writing if twice
         lets see how
-        */ 
+        */
 
-        function testLogicalAnd(val) {
-            if (val <= 50 && val >= 25) {
-                return "Yes";
-            }
-            return "Yippie";
+      function testLogicalAnd(val) {
+        if (val <= 50 && val >= 25) {
+          return "Yes";
         }
-        console.log(testLogicalAnd(17));
+        return "Yippie";
+      }
+      console.log(testLogicalAnd(17));
 
-        /* 
+      /* 
         Lets check comparison or
-        */ 
+        */
 
-        function testLogicalOr(val) {
-            if (val < 10 || val > 15) {
-                return "Its Raining";
-            }
-            return "Its sunny";
+      function testLogicalOr(val) {
+        if (val < 10 || val > 15) {
+          return "Its Raining";
         }
-        console.log(testLogicalOr(9));
+        return "Its sunny";
+      }
+      console.log(testLogicalOr(9));
 
-
-        /*
+      /*
                     Else Sttement 
 
         Now lets check else statement
         Now we have been writing if statments twice if you can see for alternate results.
         But we can make that code mush simpler
         Lets see how
-        */ 
+        */
 
-        function testElse(val) {
-            var result = "";
+      function testElse(val) {
+        var result = "";
 
-            if (val < 15) {
-                result = "Its Outside";  // we do not write the if (val > 5) 
-            } else {
-                result = "Its Inside";
-            }
-            return result;
+        if (val < 15) {
+          result = "Its Outside"; // we do not write the if (val > 5)
+        } else {
+          result = "Its Inside";
         }
-        console.log(testElse(17));
+        return result;
+      }
+      console.log(testElse(17));
 
-                            // else if statement
+      // else if statement
 
-        /*
+      /*
         If else statement is helpful when you have multiple conditions that need yto be addressed
         you can you else if statement. Its a way of chaning if statment.
         for example we have four statements and
-        */ 
+        */
 
-        function elseIF(val) {
-            if (val < 50) {
-                return "Greater than 50";
-            } else if (val >= 20) {
-                return "Less than or equal to 20";
-            } else if (val <= 5) {
-                return "Greater than or equal to 5";
-            } else {
-                return "When you say nothing at all";
-            }
-        }                    
-        console.log(elseIF(3));
+      function elseIF(val) {
+        if (val < 50) {
+          return "Greater than 50";
+        } else if (val >= 20) {
+          return "Less than or equal to 20";
+        } else if (val <= 5) {
+          return "Greater than or equal to 5";
+        } else {
+          return "When you say nothing at all";
+        }
+      }
+      console.log(elseIF(3));
+
+      /*
+        Lets create a golf game
+        Each hole has a par. It means the average number of gaols your suppose to get
+        the ball in the hole. Now depending upon how the far above or below par your stroke
+        rae there is a nick name followed as below in var
+        */
+
+      var names = [];
+
+      function golfScore(par, strokes) {
+        if (strokes == 1) {
+          return;
+        }
+      }
     </script>
-
-
-</body>
+  </body>
 </html>
